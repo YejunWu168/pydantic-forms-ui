@@ -381,6 +381,7 @@ export interface PydanticFormSchemaParsed extends PydanticFormBaseSchema {
 
 export interface PydanticFormPropertySchemaParsed
     extends Omit<PydanticFormBaseSchema, 'type'>, PydanticFormFieldValidations {
+    [key: string]: unknown;
     type?: PydanticFormFieldType;
 
     anyOf?: PydanticFormPropertySchemaParsed[];
